@@ -1,0 +1,186 @@
+$teal: #108E79;
+$darkteal: darken($teal, 15%);
+$gray: #494947;
+$lightgray: #EEEFF1;
+$red: #ff0000;
+$white: #fffaf0;
+$green: #007E00;
+
+#list {
+  background: $white;
+  box-shadow: inset 1px 1px 1px $gray;
+  border: 2vh ridge $teal;
+  float: left;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 3vh;
+  width: 70%;
+  li {
+    border-bottom: 3px double $teal;
+    display: inline-block;
+    font-size: 7vh;
+    height: 12.5%;
+    margin: 0 1vw;
+    padding: 1vh 2vh;
+    width: 98%;
+    h3 {
+      color: $gray;
+      display: block;
+      float: left;
+      font-size: 4vh;
+      line-height: 7vh;
+    }
+    #buttons {
+      float: right;
+      height: 100%;
+      width: 40%;
+      button {
+        float: left;
+        height: 100%;
+        margin-left: 1vw;
+        width: 20%;
+        position: relative;
+      }
+    }
+  }
+
+  #description {
+    cursor: default;
+    position: absolute;
+    text-shadow: none !important;
+    background: transparentize($lightgray, .2);
+    top: 0%;
+    right: 100%;
+    height: 230%;
+    box-shadow: -1px 1px 3px $gray;
+    width: 750%;
+    padding: 1.5vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 3vh;
+    text-align: left;
+    color: $darkteal;
+    font-family: 'Lato', sans-serif;
+    span {
+      display: block;
+      float: right;
+      color: $gray;
+      margin-top: 12%;
+      transition: color 1s;
+    }
+    span:hover {
+      cursor: pointer;
+      color: $darkteal;
+    }
+  }
+
+  .done {
+    background: transparentize($green, .3);
+    h3 {
+      text-decoration: line-through;
+    }
+  }
+  .urgent {
+    background: transparentize($red, .3);
+    h3 {
+      color: black;
+    }
+  }
+  .buffer {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 8.7vh;
+  }
+}
+
+#description-form {
+  @extend #description;
+  overflow-y: hidden !important;
+  height: 600% !important;
+  textarea {
+    height: 80%;
+    width: 100%;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+    color: $darkteal;
+    background: $lightgray;
+    margin: 0 auto;
+    box-shadow: inset 1px 1px 3px $gray;
+    font-size: 3vh;
+    padding: 1vh;
+  }
+  span {
+    margin-top: 3% !important;
+    background: $teal;
+    padding: 1vh 2vh;
+    font-family: 'Montserrat', sans-serif;
+    color: $white !important;
+    transition: background 1s, text-shadow 1s;
+  }
+  span:hover {
+    background: $darkteal;
+    text-shadow: 1px 1px black;
+  }
+}
+
+#form {
+  background: $white;
+  box-shadow: inset 1px 1px 1px $gray;
+  border: 2vh ridge $teal;
+  float: right;
+  height: 100%;
+  padding: 3vh;
+  width: 30%;
+  h2 {
+    margin: 2vh auto;
+  }
+  input {
+    background: $lightgray;
+    border: 1vh inset $lightgray;
+    box-shadow: inset 1px 1px 3px $gray;
+    color: $gray;
+    font-size: 4vh;
+    height: 12.5%;
+    padding: 1vh 2vh;
+    text-align: left;
+    width: 96%;
+  }
+  input:hover, input:active {
+    background: lighten($teal, 60%);
+    border: 1vh inset lighten($teal, 60%);
+  }
+  button {
+    font-size: 4vh;
+    height: 12.5%;
+    margin: auto;
+    margin-top: 10vh;
+    width: 50%;
+  }
+  #message {
+    background: transparentize($red, .3);
+    height: 30%;
+    margin: 5vh auto;
+    padding: 1vh;
+    width: 96%;
+    h3 {
+      color: $lightgray;
+      display: block;
+      font-family: 'Lato', sans-serif;
+      font-size: 4vh;
+      margin-top: 8vh;
+      width: 100%;
+    }
+    button {
+      background: transparent;
+      float: right;
+      margin-top: 0;
+      width: 10%;
+    }
+    button:active {
+      box-shadow: none;
+    }
+  }
+}
