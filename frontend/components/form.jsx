@@ -4,16 +4,13 @@ var Message = require('./message.jsx');
 var MessageActions = require('../actions/message_actions.js');
 
 var Form = React.createClass({
-
   getInitialState: function(){
     return { title: "" }
   },
-
   updateTitle: function(e){
     var newTitle = e.currentTarget.value;
     this.setState({ title: newTitle});
   },
-
   submit: function(){
     if (this.state.title.length == 0){
       MessageActions.setMessage("Title field is blank!")
@@ -23,7 +20,6 @@ var Form = React.createClass({
       this.setState({ title: "" });
     }
   },
-
   render: function(){
     return (
       <section id="form">
@@ -34,7 +30,6 @@ var Form = React.createClass({
       </section>
     )
   }
-
 });
 
 module.exports = Form;

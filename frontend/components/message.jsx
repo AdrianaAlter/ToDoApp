@@ -31,7 +31,6 @@ var Message = React.createClass({
       </section>
     )
   }
-
 });
 
 module.exports = Message;

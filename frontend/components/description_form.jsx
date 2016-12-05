@@ -8,12 +8,6 @@ var DescriptionForm = React.createClass({
   toggleDisplay: function(){
     this.state.display == "none" ? this.setState({ display: "block" }) : this.setState({ display: "none" });
   },
-  open: function(){
-    this.setState({ display: "block" });
-  },
-  close: function(){
-    this.setState({ display: "none" });
-  },
   update: function(e){
     e.preventDefault();
     this.setState({ description: e.currentTarget.value });

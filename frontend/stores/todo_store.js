@@ -3,6 +3,7 @@ var Dispatcher = require('../dispatcher/dispatcher.js');
 var TodoConstants = require('../constants/todo_constants.js');
 
 var TodoStore = new Store(Dispatcher);
+
 var _todos = [];
 
 TodoStore.all = function(){

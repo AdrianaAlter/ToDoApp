@@ -3,6 +3,7 @@ var Dispatcher = require('../dispatcher/dispatcher.js');
 var MessageConstants = require('../constants/todo_constants.js');
 
 var MessageStore = new Store(Dispatcher);
+
 var _message = [];
 
 MessageStore.all = function(){

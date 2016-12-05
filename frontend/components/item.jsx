@@ -1,16 +1,14 @@
 var React = require('react');
-var DescriptionButton = require('./description_button.jsx');
 var ApiUtil = require('../util/api_util.js');
+var DescriptionButton = require('./description_button.jsx');
 
 var Item = React.createClass({
   getInitialState: function(){
     return { done: this.props.todo.done, urgent: this.props.todo.urgent, description: this.props.todo.description }
   },
-
   delete: function(){
     ApiUtil.deleteTodo(this.props.todo.id);
   },
-
   toggleDone: function(){
     var done = this.state.done ? false : true;
     var todo = {};
@@ -18,7 +16,6 @@ var Item = React.createClass({
     ApiUtil.updateTodo(this.props.todo.id, todo);
     this.state.done ? this.setState({ done: false }) : this.setState({ done: true });
   },
-
   toggleFlag: function(){
     var urgent = this.state.urgent ? false : true;
     var todo = {};
@@ -26,12 +23,10 @@ var Item = React.createClass({
     ApiUtil.updateTodo(this.props.todo.id, todo);
     this.state.urgent ? this.setState({ urgent: false }) : this.setState({ urgent: true });
   },
-
   render: function(){
     var className = "";
     var doneIcon;
     var urgentIcon;
-
     if (this.state.done){
       className += " done ";
       doneIcon = <i className="fa fa-check-square-o fa-2x"></i>
@@ -46,7 +41,6 @@ var Item = React.createClass({
     else {
       urgentIcon = <i className="fa fa-flag-o fa-2x"></i>
     }
-
     return (
       <li className={className}>
         <h3>{this.props.todo.title}</h3>
@@ -59,7 +53,6 @@ var Item = React.createClass({
       </li>
     )
   }
-
 });
 
 module.exports = Item;

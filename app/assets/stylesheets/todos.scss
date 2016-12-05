@@ -1,10 +1,10 @@
-$teal: #108E79;
-$darkteal: darken($teal, 15%);
 $gray: #494947;
+$teal: #108E79;
+$green: #007E00;
+$darkteal: darken($teal, 15%);
 $lightgray: #EEEFF1;
 $red: #ff0000;
 $white: #fffaf0;
-$green: #007E00;
 
 #list {
   background: $white;
@@ -45,31 +45,30 @@ $green: #007E00;
   }
 
   #description {
-    cursor: default;
-    position: absolute;
-    text-shadow: none !important;
     background: transparentize($lightgray, .2);
-    top: 0%;
-    right: 100%;
-    height: 230%;
     box-shadow: -1px 1px 3px $gray;
-    width: 750%;
-    padding: 1.5vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    font-size: 3vh;
-    text-align: left;
     color: $darkteal;
+    cursor: default;
     font-family: 'Lato', sans-serif;
+    font-size: 3vh;
+    height: 230%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 1.5vh;
+    position: absolute;
+    right: 100%;
+    text-align: left;
+    text-shadow: none !important;
+    top: 0%;
+    width: 750%;
     span {
-      display: block;
-      float: right;
       color: $gray;
+      cursor: pointer;
+      float: right;
       margin-top: 12%;
       transition: color 1s;
     }
     span:hover {
-      cursor: pointer;
       color: $darkteal;
     }
   }
@@ -87,37 +86,36 @@ $green: #007E00;
     }
   }
   .buffer {
-    position: absolute;
     height: 100%;
-    top: 0;
     left: 0;
-    width: 100%;
     line-height: 8.7vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 }
 
 #description-form {
   @extend #description;
-  overflow-y: hidden !important;
   height: 600% !important;
+  overflow-y: hidden !important;
   textarea {
-    height: 80%;
-    width: 100%;
-    margin: auto;
-    font-family: 'Lato', sans-serif;
-    color: $darkteal;
     background: $lightgray;
-    margin: 0 auto;
     box-shadow: inset 1px 1px 3px $gray;
+    color: $darkteal;
+    font-family: 'Lato', sans-serif;
     font-size: 3vh;
+    height: 80%;
+    margin: 0 auto;
     padding: 1vh;
+    width: 100%;
   }
   span {
-    margin-top: 3% !important;
     background: $teal;
-    padding: 1vh 2vh;
-    font-family: 'Montserrat', sans-serif;
     color: $white !important;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3% !important;
+    padding: 1vh 2vh;
     transition: background 1s, text-shadow 1s;
   }
   span:hover {
